@@ -1,13 +1,13 @@
 #include "aux.h"
 
-int fill_left(char **map, int y, int x)
+int    fill_up(char **map, int y, int x)
 {
-    while (x > 0 && map[y][x - 1] != '1')
+    while (y > 0 && map[y - 1][x] != '1')
     {
-        if(map[y][x - 1] != 'E')
-            return(1);
-        map[y][x - 1] = 'V';
-        x--;
+        if(map[y -1][x] != 'E')
+            return(1);        
+        map[y - 1][x] = 'V';
+        y--;
     }
     return(0);
 }
@@ -32,7 +32,7 @@ int fill_left(char **map, int y, int x)
 //     printf("Before:\n");
 //     print_map(map, 5);
 
-//     fill_left(map, 3, 1);
+//     fill_up(map, 3, 1);
 
 //     printf("\nAfter:\n");
 //     print_map(map, 5);
