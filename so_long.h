@@ -14,4 +14,10 @@ typedef struct w_data {
 	void	*win;
 } w_data;
 
+typedef struct s_map {
+	int	collectibles_count;
+	int	size_x;
+	int	size_y;
+} s_map;
+
 #endif

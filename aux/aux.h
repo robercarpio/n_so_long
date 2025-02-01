@@ -18,5 +18,7 @@ int fill_down(char **map, int y, int x);
 int map_height(char **map);
 int	fill_cross(char **map, int y, int x);
 int	ft_contains(char *str, char c);
+char	*dup_line(char *s);
+char	**allocate_map(char *route);
 
 #endif
