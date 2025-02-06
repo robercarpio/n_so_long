@@ -51,8 +51,8 @@ int	check_chars_allow(char *route)
 	}
 	return(b);
 }
-int	main(void)
-{
-	printf("%d\n",check_chars_allow("/home/rcarpio-/Desktop/so_long/maps/map1.ber"));
-	return(0);
-}
+// int	main(void)
+// {
+// 	printf("%d\n",check_chars_allow("/home/rcarpio-/Desktop/so_long/maps/map1.ber"));
+// 	return(0);
+// }
