@@ -1,6 +1,6 @@
 #include "aux.h"
 
-int   pos_x(char **map)
+int   pos_y(char **map)
 {
     int   x;
     int   y;
@@ -12,7 +12,7 @@ int   pos_x(char **map)
         while (x < line_len(map[y]))
         {
             if (map[y][x] == 'P')
-                return (x);
+                return (y);
             x++;
         }
         y++;

@@ -10,10 +10,13 @@ SRCS = main.c \
        aux/fill_left.c \
        aux/fill_right.c \
        aux/fill_up.c \
+       aux/pos_x.c \
+       aux/pos_y.c \
        aux/ft_contains.c \
        aux/line_len.c \
        aux/map_height.c \
        aux/only_chars_allowed.c \
+       aux/collectibles_count.c \
        gnl/get_next_line.c \
        gnl/get_next_line_utils.c \
        process_map/is_playable.c \

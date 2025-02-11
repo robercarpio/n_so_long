@@ -20,5 +20,8 @@ int	fill_cross(char **map, int y, int x);
 int	ft_contains(char *str, char c);
 char	*dup_line(char *s);
 char	**allocate_map(char *route);
+int   pos_x(char **map);
+int   pos_y(char **map);
+int	collectible_count(char **map);
 
 #endif

@@ -12,7 +12,7 @@ int	borders_h_checker(char *route)
 	i = 1;
 	fd = open(route,O_RDONLY);
 	if(fd == -1)
-		return(perror("Error al abrir el arcivo"),-1);
+		return(perror("Error al abrir el arcivo"),close(fd),-1);
 	files = files_map(route);
 	while((line = get_next_line(fd))!=NULL)
 	{
@@ -25,10 +25,10 @@ int	borders_h_checker(char *route)
 		else if(fl)
 		{ 
 			if(i == files && only_chars_allowed(line,"1"))
-				return(free(line),1);
+				return(free(line),close(fd),1);
 			i++;
 			free(line);
 		}
 	}
-	return(0);
+	return(close(fd),0);
 }

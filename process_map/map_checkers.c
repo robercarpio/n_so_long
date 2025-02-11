@@ -42,14 +42,14 @@ int	check_chars_allow(char *route)
 
 	b = 1;
 	if((fd = open(route,O_RDONLY))==-1)
-		return(perror("Error al abrir el archivo"),-1);
+		return(perror("Error al abrir el archivo"),close(fd),-1);
 	while((line = get_next_line(fd))!=NULL)
 	{
 		if(only_chars_allowed(line,"01CPE") == 0)
-			return(0);
+			return(close(fd),0);
 		free(line);
 	}
-	return(b);
+	return(close(fd),b);
 }
 // int	main(void)
 // {

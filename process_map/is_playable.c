@@ -11,11 +11,10 @@ int	is_exit_reachable(char **grid, int y, int x, int width, int height)
 	if (grid[y][x] == 'V')
 		return (0);
 	grid[y][x] = 'V';
-	return (is_exit_reachable(grid, y, x + 1, width, height) // Derecha
-	|| is_exit_reachable(grid, y, x - 1, width, height) // Izquierda
-	|| is_exit_reachable(grid, y + 1, x, width, height) // Abajo
-	|| is_exit_reachable(grid, y - 1, x, width, height)); // Arriba
-
+	return (is_exit_reachable(grid, y, x + 1, width, height)
+	|| is_exit_reachable(grid, y, x - 1, width, height)
+	|| is_exit_reachable(grid, y + 1, x, width, height)
+	|| is_exit_reachable(grid, y - 1, x, width, height));
 }
 
 // int	main(void)
