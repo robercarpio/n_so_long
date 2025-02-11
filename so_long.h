@@ -15,9 +15,18 @@ typedef struct w_data {
 } w_data;
 
 typedef struct s_map {
-	int	collectibles_count;
+	int	n_collectibles;
 	int	size_x;
 	int	size_y;
+	s_player player;
+	char	**alloc;
 } s_map;
+
+typedef struct s_player {
+	int	py;
+	int	px;
+	int	moves;
+	int	collectibles_taken;
+} s_player;
 
 #endif
