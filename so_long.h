@@ -9,10 +9,12 @@
 #include "./minilibx-linux/mlx_int.h"
 #include "gnl/get_next_line.h"
 
-typedef struct w_data {
-	void	*mlx;
-	void	*win;
-} w_data;
+typedef struct s_player {
+	int	py;
+	int	px;
+	int	moves;
+	int	collectibles_taken;
+} s_player;
 
 typedef struct s_map {
 	int	n_collectibles;
@@ -22,11 +24,15 @@ typedef struct s_map {
 	char	**alloc;
 } s_map;
 
-typedef struct s_player {
-	int	py;
-	int	px;
-	int	moves;
-	int	collectibles_taken;
-} s_player;
+typedef struct s_game {
+	void	*window;
+	void	*mlx;
+	void	*wall;
+	void	*floor;
+	void	*exit;
+	void	*player;
+	s_map	map;
+	int	pixels;
+} s_game;
 
 #endif

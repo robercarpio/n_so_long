@@ -11,8 +11,11 @@ int   pos_x(char **map)
             x = 0;
             while(x < line_len(map[y]))
             {
+                  if(map[x][y] == 'P')
+                        return(x);
                   x++;
             }
             y++;
-      }      
+      }
+      return(-1);
 }
