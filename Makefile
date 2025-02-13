@@ -19,6 +19,8 @@ SRCS = main.c \
        aux/collectibles_count.c \
        gnl/get_next_line.c \
        gnl/get_next_line_utils.c \
+       print_map/init.c \
+       print_map/print_map.c \
        process_map/is_playable.c \
        process_map/map_checkers.c
 

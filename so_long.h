@@ -4,7 +4,6 @@
 # include <X11/Xlib.h>
 #include "./aux/aux.h"
 #include "./process_map/process_map.h"
-#include "./print_map/print_map.h"
 #include "./minilibx-linux/mlx.h"
 #include "./minilibx-linux/mlx_int.h"
 #include "gnl/get_next_line.h"
@@ -30,6 +29,7 @@ typedef struct s_game {
 	void	*wall;
 	void	*floor;
 	void	*exit;
+	void	*collectible;
 	s_player	player;
 	s_map	map;
 	int	pixels;

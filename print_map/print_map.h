@@ -4,13 +4,14 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include "../so_long.h"
 #include "../gnl/get_next_line.h"
 #include "../aux/aux.h"
-#include "../so_long.h"
 #include "../minilibx-linux/mlx.h"
 #include "../minilibx-linux/mlx_int.h"
 
-int   play();
-
-
-#endif
+int	play();
+void	init_structs(s_map *map,s_player *player,s_game *game);
+void	print_chunk(int	x, int y, char chunk, s_game *game);
+void	print_map(s_game game);
+#endif	
