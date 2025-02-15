@@ -35,7 +35,9 @@ void	print_chunk(int	x, int y, char chunk, s_game *game)
 	else if (chunk == '1')
 		mlx_put_image_to_window(game->mlx,game->window,game->wall,x,y);
 	else if (chunk == 'P')
-		mlx_put_image_to_window(game->mlx,game->window,game->wall,x,y);
+		mlx_put_image_to_window(game->mlx,game->window,game->character,x,y);
 	else if (chunk == 'C')
 		mlx_put_image_to_window(game->mlx,game->window,game->collectible,x,y);		
+	else if (chunk == 'E')
+		mlx_put_image_to_window(game->mlx,game->window,game->exit,x,y);
 }

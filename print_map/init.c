@@ -22,5 +22,7 @@ void	init_structs(s_map *map,s_player *player,s_game *game)
 	game->floor = mlx_xpm_file_to_image(game->mlx,"./textures/floor.xpm",&game->pixels,&game->pixels);
 	game->wall = mlx_xpm_file_to_image(game->mlx,"./textures/wall.xpm",&game->pixels,&game->pixels);
 	game->collectible = mlx_xpm_file_to_image(game->mlx,"./textures/coin.xpm",&game->pixels,&game->pixels);
+	game->character = mlx_xpm_file_to_image(game->mlx,"./textures/character.xpm",&game->pixels,&game->pixels);
+	game->exit = mlx_xpm_file_to_image(game->mlx,"./textures/exit.xpm",&game->pixels,&game->pixels);
 	game->window = mlx_new_window(game->mlx,(map->size_x * 50),(map->size_y * 50),"so_long");
 }

@@ -30,6 +30,7 @@ typedef struct s_game {
 	void	*floor;
 	void	*exit;
 	void	*collectible;
+	void	*character;
 	s_player	player;
 	s_map	map;
 	int	pixels;
