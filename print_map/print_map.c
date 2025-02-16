@@ -12,12 +12,12 @@ void	print_map(s_game game)
 	
 	while(i<game.map.size_y)
 	{
-		printf("y :%d\n",i);
+		// printf("y :%d\n",i);
 		j = 0;
 		x = 0;
 		while(j<game.map.size_x)
 		{
-			printf("x :%d\n",j);
+			// printf("x :%d\n",j);
 			print_chunk(x,y,game.map.alloc[i][j],&game);
 			j++;
 			x+=50;

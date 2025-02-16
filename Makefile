@@ -21,6 +21,8 @@ SRCS = main.c \
        gnl/get_next_line_utils.c \
        print_map/init.c \
        print_map/print_map.c \
+       events/events.c \
+       events/movement.c \
        process_map/is_playable.c \
        process_map/map_checkers.c
 
@@ -34,7 +36,6 @@ INCLUDES = so_long.h
 
 all: $(NAME)
 	@echo "OK"
-
 $(NAME): $(OBJS)
 	cd $(MLX_DIR) && $(MAKE) > /dev/null 2>/dev/null
 	$(CC) $(CFLAGS) $(OBJS) -L$(MLX_DIR) -lmlx_Linux -L/usr/lib -I$(MLX_DIR) -lXext -lX11 -lm -lz -o $(NAME)

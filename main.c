@@ -1,6 +1,17 @@
 #include "so_long.h"
 #include <stdio.h>
 #include "./print_map/print_map.h"
+#include "./events/events.h"
+
+// int key_hook(int keycode, s_game *game)
+// {
+//     if (keycode == 119)
+//     {
+//         game->player.moves++;
+//         printf("Movimientos: %d\n", game->player.moves);
+//     }
+//     return (0);
+// }
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +24,7 @@ int main(int argc, char *argv[])
 
     init_structs(&map,&player,&game);
     print_map(game);
+    mlx_key_hook(game.window, key_hook, &game);
     mlx_loop(game.mlx);
     return(0);
 }
