@@ -10,6 +10,9 @@ int key_hook(int keycode, s_game *game)
 	move(game, keycode);
     }
     else if(keycode == 65307)
-    	mlx_destroy_window(game->mlx,game->window);
+    {
+        mlx_destroy_window(game->mlx,game->window);
+        exit(-1);
+    }
     return (0);
 }

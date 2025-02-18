@@ -17,6 +17,22 @@ int	is_exit_reachable(char **grid, int y, int x, int width, int height)
 	|| is_exit_reachable(grid, y - 1, x, width, height));
 }
 
+int	are_coins_reachable(char **grid, int y, int x, int width, int height, int *i)
+{
+	if (x < 0 || y < 0 || x >= width || y >= height
+		|| grid[y][x] == '1')
+		return (0);
+	if (grid[y][x] == 'C')
+		(*i)++;
+	if (grid[y][x] == 'V')
+		return (0);
+	grid[y][x] = 'V';
+	return (are_coins_reachable(grid, y, x + 1, width, height,i)
+	|| are_coins_reachable(grid, y, x - 1, width, height,i)
+	|| are_coins_reachable(grid, y + 1, x, width, height,i)
+	|| are_coins_reachable(grid, y - 1, x, width, height,i));
+}
+
 // int	main(void)
 // {
 // 	char	**map = allocate_map("/home/rcarpio-/Desktop/clones/n_so_long/maps/map1.ber");

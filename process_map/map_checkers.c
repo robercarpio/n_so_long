@@ -1,5 +1,10 @@
 #include "process_map.h"
 
+int	check_map(char *route)
+{
+	return(is_rectangle(route) && check_borders_map(route) && check_chars_allow(route));
+}
+
 int is_rectangle(char *route)
 {
     int fd;

@@ -1,9 +1,11 @@
 #ifndef AUX_H
 # define AUX_H
 
+#include "../so_long.h"
 #include <stdlib.h>
 #include <fcntl.h>
 #include "../gnl/get_next_line.h"
+
 
 int files_map(char *route);
 int	line_len(char *str);
@@ -23,5 +25,9 @@ char	**allocate_map(char *route);
 int   pos_x(char **map);
 int   pos_y(char **map);
 int	collectible_count(char **map);
+int	str_compare(char *str1, char *str2);
+int	ber_file(char *str);
+char	*str_join(char *s1, char *s2);
+int	count_char(char **map,char c);
 
 #endif

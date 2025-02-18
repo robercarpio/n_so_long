@@ -17,10 +17,15 @@ SRCS = main.c \
        aux/map_height.c \
        aux/only_chars_allowed.c \
        aux/collectibles_count.c \
+       aux/ber_file.c \
+       aux/str_compare.c \
+       aux/str_join.c \
+       aux/count_char.c \
        gnl/get_next_line.c \
        gnl/get_next_line_utils.c \
        print_map/init.c \
        print_map/print_map.c \
+       print_map/play.c \
        events/events.c \
        events/movement.c \
        process_map/is_playable.c \
