@@ -26,3 +26,14 @@ void	init_structs(s_map *map,s_player *player,s_game *game)
 	game->exit = mlx_xpm_file_to_image(game->mlx,"./textures/exit.xpm",&game->pixels,&game->pixels);
 	game->window = mlx_new_window(game->mlx,(map->size_x * 50),(map->size_y * 50),"so_long");
 }
+
+// void    init_player(s_player *player, char *route)
+// {
+//     char    **a_map;
+
+//     a_map = allocate_map(route);
+//     player->px = pos_x(a_map);
+//     player->py = pos_y(a_map);
+//     player->moves = 0;
+//     player->collectibles_taken = 0;
+// }

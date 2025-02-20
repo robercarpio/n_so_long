@@ -24,7 +24,5 @@ int main(int argc, char *argv[])
     return(0);
 }
 
-//file_to_img guardo assets
-//pone un cuadrado mlx_image_to_window
-//mlx_clear_window;
-//recorro mapa y pongo cuadrado
+//guardar las coordenadas de la E para poder pintarla despues de pasar por encima de ella y que se mantega
+

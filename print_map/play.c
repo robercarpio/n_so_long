@@ -33,6 +33,7 @@ void	play(char *route)
 				if(count_char(chars_map,'P')== 1 && count_char(chars_map,'E')== 1)
 				{
 					print_map(game);
+					mlx_key_hook(game.window, key_hook, &game);
     					mlx_loop(game.mlx);
 				}
 				else
