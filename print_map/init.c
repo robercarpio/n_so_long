@@ -1,10 +1,10 @@
 #include "print_map.h"
 
-void	init_structs(s_map *map,s_player *player,s_game *game)
+void	init_structs(s_map *map,s_player *player,s_game *game, char *route)
 {
 	char    **a_map;
 
-	a_map= allocate_map("./maps/map1.ber");
+	a_map= allocate_map(route);
 	
 	player->px = pos_x(a_map);
 	player->py = pos_y(a_map);

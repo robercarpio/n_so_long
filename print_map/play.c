@@ -17,7 +17,7 @@ void	play(char *route)
 		//comprobar si el mapa es valido
 		if(check_map(full_route))
 		{
-			init_structs(&map,&player,&game);
+			init_structs(&map,&player,&game,full_route);
 			//comprobar si el mapa es jugable;
 			i = 0;
 			e_map = allocate_map(full_route);
@@ -55,3 +55,4 @@ void	play(char *route)
 		write(1,"Error: No es un archivo .ber\n",29);
 	}
 }
+//exit

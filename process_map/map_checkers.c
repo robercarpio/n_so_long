@@ -2,6 +2,20 @@
 
 int	check_map(char *route)
 {
+    // if (is_rectangle(route))
+    // {
+    //     if(check_borders_map(route))
+    //     {
+    //         if(check_chars_allow(route))
+    //             return(1);
+    //         else
+    //             return (0);
+    //     }
+    //     else
+    //         return(0);
+    // }
+    // else
+    //     return (0);
 	return(is_rectangle(route) && check_borders_map(route) && check_chars_allow(route));
 }
 
@@ -18,7 +32,7 @@ int is_rectangle(char *route)
     rows = 0;
     is_rect = 1;
     if ((fd = open(route, O_RDONLY)) == -1)
-        return (perror("Error al abrir el archivo"), -1);
+        return (perror("Error al abrir el archivo 1"),exit(-1), -1);
     while ((line = get_next_line(fd)))
     {
         current_len = line_len(line);
@@ -47,7 +61,7 @@ int	check_chars_allow(char *route)
 
 	b = 1;
 	if((fd = open(route,O_RDONLY))==-1)
-		return(perror("Error al abrir el archivo"),close(fd),-1);
+		return(perror("Error al abrir el archivo"),exit(-1),-1);
 	while((line = get_next_line(fd))!=NULL)
 	{
 		if(only_chars_allowed(line,"01CPE") == 0)

@@ -15,6 +15,7 @@
 int key_hook(int keycode, s_game *game);
 int   can_move(s_game game, int c);
 void  move(s_game *game, int keycode);
-void    close_game(s_game game, char *error);
+void    close_game(s_game *game, char *error);
+void    free_map(char **map);
 
 #endif

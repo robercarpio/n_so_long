@@ -12,7 +12,7 @@ int	borders_h_checker(char *route)
 	i = 1;
 	fd = open(route,O_RDONLY);
 	if(fd == -1)
-		return(perror("Error al abrir el arcivo"),close(fd),-1);
+		return(perror("Error al abrir el archivo"),exit(-1),-1);
 	files = files_map(route);
 	while((line = get_next_line(fd))!=NULL)
 	{

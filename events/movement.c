@@ -20,7 +20,7 @@ int   can_move(s_game game, int c)
 		x++;
             //
       if((game.map.alloc[y][x]=='E' && game.map.n_collectibles==game.player.collectibles_taken))
-            close_game(game, "WIN");
+            close_game(&game, "WIN");
             //exit(-1);
 	else if(game.map.alloc[y][x] == '1'|| (game.map.alloc[y][x]=='E' && game.map.n_collectibles>game.player.collectibles_taken))
 		b = 0;
