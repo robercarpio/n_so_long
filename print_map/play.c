@@ -40,7 +40,10 @@ void	play(char *route)
 					printf("Error: Solo pueda haber una P y una E en el mapa");
 			}
 			else
+			{
 				printf("fallo de los flood fills\n");
+			}
+				
 
 			// printf("coins: %d\n",i);
 			// printf("game coins: %d\n",game.map.n_collectibles);

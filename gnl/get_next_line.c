@@ -89,6 +89,7 @@ char	*ft_aux(char **stg)
 	tmp = ft_strdup(*stg + len);
 	free(*stg);
 	*stg = tmp;
+	free(tmp);
 	return (l);
 }
 
