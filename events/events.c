@@ -16,3 +16,9 @@ int key_hook(int keycode, s_game *game)
     }
     return (0);
 }
+void    close_game(s_game game, char *error)
+{
+    print_error(error);
+    free(game.map.alloc);
+    exit(-1);
+}

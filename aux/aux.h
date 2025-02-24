@@ -4,6 +4,7 @@
 #include "../so_long.h"
 #include <stdlib.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include "../gnl/get_next_line.h"
 
 
@@ -29,5 +30,6 @@ int	str_compare(char *str1, char *str2);
 int	ber_file(char *str);
 char	*str_join(char *s1, char *s2);
 int	count_char(char **map,char c);
+void	print_error(char *error);
 
 #endif
